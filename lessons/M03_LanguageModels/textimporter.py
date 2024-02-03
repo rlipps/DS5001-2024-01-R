@@ -24,7 +24,7 @@ class TextImporter():
     ohco_pats:[tuple] = [
         ('para', r"\n\n", 'd'),
         ('sent', r"[.?!;:]+", 'd'),
-        ('token', r"[\s',-]+", 'd')
+        ('token', r"[\s',-,_,--]+", 'd')    # added ,_,-- to deal with troublesome tokens
     ]
         
     _ohco_type:{} = {
@@ -155,7 +155,7 @@ class TextImporter():
         div_pat = self.ohco_pats[ohco_level][1]
         
         # Notify
-        print(f"by delimitter {div_pat}")
+        print(f"by delimiter {div_pat}")
         
         # The suffix of the id for the new table
         id_suffix = self._ohco_type['d']
@@ -182,7 +182,7 @@ class TextImporter():
         
         # Remove join content (e.g. new lines)
         df[dst_col] = df[dst_col].str.replace(self.join_pat, ' ', regex=True)
-        df[dst_col] = df[dst_col].str.replace('_', '', regex=True)
+        #df[dst_col] = df[dst_col].str.replace('_', '', regex=True) # remove troublesome characters
         
         # Remove empty lines
         df = df[~df[dst_col].str.contains(r'^\s*$', regex=True)]
