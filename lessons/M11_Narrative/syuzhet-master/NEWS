@@ -1,0 +1,66 @@
+syuzhet 1.0.7
+==========
+* Updated functions to resolve version incompatibility.
+
+syuzhet 1.0.6
+==========
+* Updated functions to resolve version incompatibility.
+
+syuzhet 1.0.5
+==========
+* Updated Afinn Lexicon
+
+syuzhet 1.0.4
+==========
+* Added support and documentation for use of custom lexicons with the get_sentiment() function.  
+
+syuzhet 1.0.3
+==========
+* Added support for multiple languages using expanded NRC lexicon. (Via Denis Roussel)
+
+syuzhet 1.0.2
+==========
+* Added paralellization of get_sentiment using parallel package. (Via Philip Bulsink)
+* Removed the Java dependency by utilizing the textshape package for sentence splitting (Via Tyler Rinker)
+
+syuzhet 1.0.1
+==========
+* Added get_sentiment_dictionary() function.  
+
+* Updated simple_plot(). 
+
+* Updated documentation.
+
+syuzhet 1.0.0
+==========
+* Added get_dct_transform(), rescale_x_2(), and simple_plot() functions.  
+
+* Added new "syuzhet" (default) sentiment dictionary. 
+
+* Updated documentation and vignettes.
+
+syuzhet 0.3.0
+==========
+* Added get_tokens() for word level tokenization in addition to sentence level. 
+* Updated get_transformed_values() with changes from Tommy MacGuire that resolve the periodicity artifacts at the beginnings and ends of a transfomred signal. Updated documentation.
+
+syuzhet 0.2.2
+==========
+* Added quote stripping option to get_sentences() function (Thanks to Annie Swafford)
+
+syuzhet 0.2.1
+==========
+* Added "bins" argument to get_percentage_values() to allow for chunk control.
+
+syuzhet 0.2.0
+==========
+
+* Corrections to .travis.yml (via Ben Marwick)
+
+* Bug fix and documentation updates for `get_transformed_values`
+
+* Addition of tests (via Lincoln Mullen)
+
+* Addition of data files necessary for building vignette (via Lincoln Mullen)
+
+* Install instructions for github added to readme (contributed by Hadley Wickham)
