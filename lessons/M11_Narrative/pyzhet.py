@@ -83,7 +83,7 @@ class SyuzhetBook:
             figsize = (25, 5), 
             legend = False, 
             fontsize = 16,
-            title = f"{self.book_title} {method})"
+            title = f"{self.book_title} {method}"
         )
 
         if method == "DCT":
