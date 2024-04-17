@@ -106,5 +106,5 @@ class SyuzhetBook:
                          norm=None):
         
         window = round(self.sent_vec.shape[0]/win_div)
-        plot_title = self.book_title + f'  (rolling; div={win_div}, w={window}, {self.src})'
+        plot_title = self.book_title + f'  (rolling; div={win_div}, w={window})'
         self.sent_vec.rolling(window, win_type=win_type).mean().plot(figsize=(25,5), title=plot_title)
